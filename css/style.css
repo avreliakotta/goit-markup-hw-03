@@ -14,13 +14,40 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid blue;
+}
+
 .list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .link {
   text-decoration: none;
 }
 /*Header*/
+.header-page {
+  border-bottom: 1px solid var(--rare-color);
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -34,6 +61,9 @@ body {
   color: var(--primary-color);
 }
 .nav-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--primary-color);
@@ -47,6 +77,9 @@ body {
   font-style: normal;
 }
 .contact-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
   line-height: 1.5;
   color: var(--secondary-color);
 }
@@ -54,9 +87,34 @@ body {
 .contact-link:focus {
   color: var(--branding-color);
 }
+
+.nav-list {
+  display: flex;
+  margin-left: 76px;
+}
+.nav-list .item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contact-list {
+  display: flex;
+}
+.contact-list .contact-item + .contact-item {
+  margin-left: 40px;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+.container-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*Hero*/
 .hero {
   background-color: var(--primary-color);
+  text-align: center;
 }
 .hero-title {
   font-weight: 700;
@@ -65,6 +123,7 @@ body {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--invent-color);
+  margin-bottom: 48px;
 }
 .hero-button {
   font-family: inherit;
@@ -77,14 +136,29 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent;
   border-radius: 4px;
-  text-align: center;
   cursor: pointer;
+  display: inline-block;
+  padding: 16px 32px;
+  margin-bottom: 188px;
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--branding-color);
 }
 /*Section-1*/
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.about-section {
+  padding-top: 0;
+}
+.benefits-list {
+  display: flex;
+}
+.benefits-list .benefits-item + .benefits-item {
+  margin-left: 24px;
+}
 
 .subtitle {
   font-weight: 500;
@@ -92,11 +166,19 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--primary-color);
+  margin-bottom: 8px;
 }
 .text {
   line-height: 1.5;
 }
 /*Section-2*/
+
+.image-list {
+  display: flex;
+}
+.image-list .image-item + .image-item {
+  margin-left: 24px;
+}
 .section-title {
   font-size: 36px;
   line-height: 1.11;
@@ -104,22 +186,45 @@ body {
   color: var(--primary-color);
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
+
 /*Section-3*/
 .team-section {
   background-color: var(--additional-color);
 }
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+.team-list .team-item + .team-item {
+  margin-left: 24px;
+}
+
 .card-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--primary-color);
+  margin-bottom: 8px;
 }
 .card-text {
   line-height: 1.5;
   color: var(--secondary-color);
 }
+.centered {
+  text-align: center;
+}
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+}
+.filters-list .filter-imem + .filter-imem {
+  margin-left: 24px;
+}
+
 .filter-button {
   font-family: inherit;
   font-weight: 500;
@@ -132,6 +237,7 @@ body {
   border: 1px solid var(--rare-color);
   border-radius: 4px;
   cursor: pointer;
+  padding: 12px 24px;
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -139,8 +245,35 @@ body {
   color: var(--invent-color);
 }
 
+.work-section {
+  padding-top: 96px;
+}
+.card {
+  border-bottom: 1px solid var(--rare-color);
+}
+.content {
+  padding: 32px 16px;
+  background-color: var(--invent-color);
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -24px;
+  margin-top: -48px;
+  outline: 1px solid tomato;
+}
+.works-list > .card-item {
+  outline: 1px solid teal;
+  flex-basis: calc(100% / 3-24);
+  margin-left: 24px;
+  margin-top: 48px;
+}
+
 .end-page {
   background-color: var(--primary-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -151,6 +284,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-color);
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .footer-part {
   color: var(--additional-color);
